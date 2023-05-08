@@ -1,5 +1,5 @@
-var express = require("express");
-var app = express();
+const express = require("express");
+const app = express();
 
 const convert = require('json-to-plain-text');
 const bodyParser = require("body-parser");
@@ -10,9 +10,9 @@ app.use(bodyParser.urlencoded({
 
 app.post("/url", bodyParser.json(), (req, res) => {
     const body = req.body
-    body.bmi = 25
+    const height = body.height
+    body.bmi = (body.weight / (height * height) * 703).toFixed(1)
     const text = convert.toPlainText(body)
-    console.log(text)
     res.attachment('filename.txt')
     res.type('txt')
     res.send(text)
