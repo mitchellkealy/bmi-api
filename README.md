@@ -10,11 +10,12 @@ This is a simple and lean API which calculates BMI when sent height and weight.
 
 ## How to Use
 Send a JSON payload to http://localhost:3000/url that matches the following structure:
+```
 {
     "height": 80, 
     "weight": 200 
 }
-
+```
 The app will then return a text response similar to this:
 ```
 height         : 80
