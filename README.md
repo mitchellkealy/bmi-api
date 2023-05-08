@@ -36,7 +36,8 @@ const data = await response.json();
 
 console.log(data);
 ```
-
+## UML Diagram
+![BMP API UML DIAGRAM](https://github.com/mitchellkealy/bmi-api/blob/main/UML-Diagram.png)
 
 Please reach out to kealym@oregonstate.edu with any questions.
 
